@@ -81,7 +81,7 @@ export default function Register() {
     };
 
     axios
-      .post('http://localhost:3000/api/auth/register', data)
+      .post('https://qqqq-v7b6.onrender.com/api/auth/register', data)
       .then(handleRegisterSuccess)
       .catch(handleRegisterFailure);
   };

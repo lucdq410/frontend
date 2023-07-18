@@ -12,7 +12,7 @@ export default function ViewDocDetail() {
   useEffect(() => {
     // Send GET request to fetch doctor details
     axios
-      .get(`http://localhost:3000/api/account/doctor/details?id=${id}`)
+      .get(`https://qqqq-v7b6.onrender.com/api/account/doctor/details?id=${id}`)
       .then((response) => {
         // Handle the response from the API
         setDoctor(response.data.doctor);
@@ -24,7 +24,7 @@ export default function ViewDocDetail() {
 
     // Send GET request to fetch slots for the doctor
     axios
-      .get(`http://localhost:3000/api/slot/getSlotbyDoctor?doctorId=${id}`)
+      .get(`https://qqqq-v7b6.onrender.com/api/slot/getSlotbyDoctor?doctorId=${id}`)
       .then((response) => {
         // Handle the response from the API
         const filteredSlots = response.data.slots.filter((slot) => slot.status === 'available');

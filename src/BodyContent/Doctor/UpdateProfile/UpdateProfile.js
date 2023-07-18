@@ -23,7 +23,7 @@ function DoctorUpdateProfile() {
   useEffect(() => {
     const fetchDoctorInfo = async () => {
       try {
-        const doctorPromise = await axios.get(`http://localhost:3000/api/account/doctor/details?id=${id}`);
+        const doctorPromise = await axios.get(`https://qqqq-v7b6.onrender.com/api/account/doctor/details?id=${id}`);
         const doctorData = doctorPromise.data.doctor;
         setDoctorInfo(doctorData);
       } catch (error) {
@@ -46,7 +46,7 @@ function DoctorUpdateProfile() {
     event.preventDefault();
 
     try {
-      await axios.post(`http://localhost:3000/api/account/doctor/update?doctorId=${id}`, doctorInfo);
+      await axios.post(`https://qqqq-v7b6.onrender.com/api/account/doctor/update?doctorId=${id}`, doctorInfo);
       navigate(`/doctor/profile/${id}`);
     } catch (error) {
       console.log('Error updating doctor info:', error);

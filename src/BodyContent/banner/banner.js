@@ -8,7 +8,7 @@ export default function Banner() {
     const [isLoading, setIsLoading] = useState(true);
     useEffect(() => {
         axios
-          .get('http://localhost:3000/api/amount/get')
+          .get('https://qqqq-v7b6.onrender.com/api/amount/get')
           .then((response) => {
             setAmount(response.data.amount);
             setIsLoading(false);
@@ -21,7 +21,7 @@ export default function Banner() {
     return (
         <div className="ct"   >
             <nav className="box">
-                <button className="appointment-btn" onClick={<AppointmentForm/>}>Appointment {amount} vnd</button>
+                <button className="appointment-btn" onClick={() => <AppointmentForm/>}>Appointment {amount} vnd</button>
             </nav>
         </div>
     );

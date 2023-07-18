@@ -41,9 +41,9 @@ function AddAmountPage() {
     let apiUrl = '';
 
     if (selectedAction === 'add') {
-      apiUrl = 'http://localhost:3000/api/account/customer/addAmount';
+      apiUrl = 'https://qqqq-v7b6.onrender.com/api/account/customer/addAmount';
     } else if (selectedAction === 'subtract') {
-      apiUrl = 'http://localhost:3000/api/account/customer/subtractAmount';
+      apiUrl = 'https://qqqq-v7b6.onrender.com/account/customer/subtractAmount';
     }
 
     axios

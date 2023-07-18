@@ -51,7 +51,7 @@ function ChangePass() {
 
     const email = user.email;
     try {
-      const response = await axios.post('http://localhost:3000/api/auth/changepass', {
+      const response = await axios.post('https://qqqq-v7b6.onrender.com/api/auth/changepass', {
         email,
         password,
         newPassword,

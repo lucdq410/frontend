@@ -22,7 +22,7 @@ const SlotAppointment = () => {
   useEffect(() => {
     const fetchSlot = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/api/slot/details?id=${id}`);
+        const response = await axios.get(`https://qqqq-v7b6.onrender.com/api/slot/details?id=${id}`);
         setSlot(response.data.slot);
         setLoading(false);
       } catch (error) {
@@ -39,7 +39,7 @@ const SlotAppointment = () => {
   useEffect(() => {
     const fetchDoctor = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/api/account/doctor/details?id=${slot.doctorID}`);
+        const response = await axios.get(`https://qqqq-v7b6.onrender.com/api/account/doctor/details?id=${slot.doctorID}`);
         setDoctor(response.data.doctor);
       } catch (error) {
         setError('Failed to fetch doctor');
@@ -63,7 +63,7 @@ const SlotAppointment = () => {
       };
 
       // Gửi yêu cầu POST đến API
-      const response = await axios.post(`http://localhost:3000/api/appointment/create?customerId=${id}`, appointmentData);
+      const response = await axios.post(`https://qqqq-v7b6.onrender.com/api/appointment/create?customerId=${id}`, appointmentData);
 
       // Kiểm tra phản hồi từ API
       if (response.status === 200) {

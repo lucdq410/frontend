@@ -8,7 +8,7 @@ const UpdateAmountPage = () => {
 
   useEffect(() => {
     axios
-      .get('http://localhost:3000/api/amount/get')
+      .get('https://qqqq-v7b6.onrender.com/api/amount/get')
       .then((response) => {
         setAmount(response.data.amount);
         setIsLoading(false);
@@ -25,7 +25,7 @@ const UpdateAmountPage = () => {
 
   const handleConfirm = () => {
     axios
-      .post('http://localhost:3000/api/amount/update', { amount: amount })
+      .post('https://qqqq-v7b6.onrender.com/api/amount/update', { amount: amount })
       .then((response) => {
         console.log('Amount updated successfully');
       })

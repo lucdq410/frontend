@@ -44,7 +44,7 @@ function CustomerViewDoctor() {
     if (isConfirmationEnabled) {
       // Send POST request to the API
       axios
-        .post('http://localhost:3000/api/slot/getDoctorByTime', {
+        .post('https://qqqq-v7b6.onrender.com/api/slot/getDoctorByTime', {
           selectedDate,
           selectedTime,
         })

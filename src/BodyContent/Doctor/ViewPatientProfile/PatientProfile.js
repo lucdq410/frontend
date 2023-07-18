@@ -19,7 +19,7 @@ const PatientProfile = () => {
   useEffect(() => {
     const fetchCustomer = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/api/account/customer/details?id=${id}`); // Thay đổi URL API tương ứng
+        const response = await axios.get(`https://qqqq-v7b6.onrender.com/api/account/customer/details?id=${id}`); // Thay đổi URL API tương ứng
         const customerData = response.data.customer;
         setCustomer(customerData);
         
@@ -30,7 +30,7 @@ const PatientProfile = () => {
 
     const fetchTreatmentProfiles = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/api/treatment_profile/schedule?id=${id}`); // Thay đổi URL API tương ứng
+        const response = await axios.get(`https://qqqq-v7b6.onrender.com/api/treatment_profile/schedule?id=${id}`); // Thay đổi URL API tương ứng
         const treatmentProfilesData = response.data.treatmentProfiles;
         
         
@@ -94,7 +94,7 @@ const PatientProfile = () => {
       };
 
       // Gửi yêu cầu tạo treatment profile
-      const response = await axios.post('http://localhost:3000/api/treatment_profile/create', newProfile); // Thay đổi URL API tương ứng
+      const response = await axios.post('https://qqqq-v7b6.onrender.com/api/treatment_profile/create', newProfile); // Thay đổi URL API tương ứng
 
       // Xử lý phản hồi từ server
       const createdProfile = response.data;

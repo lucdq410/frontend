@@ -14,12 +14,12 @@ function CustomerViewBooking() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/api/appointment/appointmentcustomer?customerID=${id}`)
+      .get(`https://qqqq-v7b6.onrender.com/api/appointment/appointmentcustomer?customerID=${id}`)
       .then((response) => {
         const appointmentsData = response.data.appointments;
         const appointmentPromises = appointmentsData.map((appointment) => {
-          const doctorPromise = axios.get(`http://localhost:3000/api/account/doctor/details?id=${appointment.doctorID}`);
-          const slotPromise = axios.get(`http://localhost:3000/api/slot/details?id=${appointment.slotID}`);
+          const doctorPromise = axios.get(`https://qqqq-v7b6.onrender.com/api/account/doctor/details?id=${appointment.doctorID}`);
+          const slotPromise = axios.get(`https://qqqq-v7b6.onrender.com/api/slot/details?id=${appointment.slotID}`);
 
           return Promise.all([doctorPromise, slotPromise])
             .then(([doctorResponse, slotResponse]) => {

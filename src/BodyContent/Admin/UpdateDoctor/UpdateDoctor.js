@@ -28,7 +28,7 @@ function AdminUpdateDoctor() {
     const fetchDoctor = async () => {
       try {
         setIsLoading(true);
-        const response = await axios.get(`http://localhost:3000/api/admin/getDoctor?doctorId=${doctorId}`);
+        const response = await axios.get(`https://qqqq-v7b6.onrender.com/api/admin/getDoctor?doctorId=${doctorId}`);
         const doctorData = response.data.doctor;
         setDoctorInfo(doctorData);
       } catch (error) {
@@ -63,8 +63,8 @@ function AdminUpdateDoctor() {
     if (confirmed) {
       try {
         setIsLoading(true);
-        await axios.post(`http://localhost:3000/api/account/doctor/update?doctorId=${doctorId}`, doctorInfo);
-        window.location.href = `http://localhost:3001/admin/doctordetail/${doctorId}`;
+        await axios.post(`https://qqqq-v7b6.onrender.com/api/account/doctor/update?doctorId=${doctorId}`, doctorInfo);
+        window.location.href = `https://tienrang.vercel.app/admin/doctordetail/${doctorId}`;
       } catch (error) {
         console.error(error);
       } finally {

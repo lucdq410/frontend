@@ -12,7 +12,7 @@ const TopUpWallet = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/api/account/customer/details?id=${id}`); // Thay đổi URL API tùy theo yêu cầu của bạn
+        const response = await axios.get(`https://qqqq-v7b6.onrender.com/api/account/customer/details?id=${id}`); // Thay đổi URL API tùy theo yêu cầu của bạn
         setUserData(response.data);
         
        

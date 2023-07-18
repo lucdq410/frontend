@@ -14,7 +14,7 @@ const DoctorList = () => {
   useEffect(() => {
     setIsLoading(true);
     axios
-      .get('http://localhost:3000/api/account/doctor/alllist')
+      .get('https://qqqq-v7b6.onrender.com/api/account/doctor/alllist')
       .then((response) => {
         setDoctors(response.data.doctors);
       })
@@ -43,7 +43,7 @@ const DoctorList = () => {
 
   const handleConfirmationConfirm = async () => {
     try {
-      await axios.post(`http://localhost:3000/api/account/doctor/status?id=${selectedDoctor.id}`);
+      await axios.post(`https://qqqq-v7b6.onrender.com/api/account/doctor/status?id=${selectedDoctor.id}`);
 
       const updatedDoctors = doctors.map((doctor) =>
         doctor.id === selectedDoctor.id ? selectedDoctor : doctor

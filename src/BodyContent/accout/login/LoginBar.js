@@ -40,7 +40,7 @@ export default function LoginBar() {
     };
 
     axios
-      .post('http://localhost:3000/api/auth/login', data)
+      .post('https://qqqq-v7b6.onrender.com/api/auth/login', data)
       .then(handleLoginSuccess)
       .catch(handleLoginFailure);
   };

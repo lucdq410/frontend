@@ -23,7 +23,7 @@ function CreateSchedulePage() {
 
   const fetchDoctorsByName = async () => {
     try {
-      const response = await axios.get(`http://localhost:3000/api/admin/getAllDoctorByName?name=${searchValue}`);
+      const response = await axios.get(`https://qqqq-v7b6.onrender.com/api/admin/getAllDoctorByName?name=${searchValue}`);
       setDoctors(response.data.doctors);
       setCurrentPage(1);
     } catch (error) {
@@ -73,7 +73,7 @@ function CreateSchedulePage() {
       setIsLoading(true);
 
       axios
-        .post('http://localhost:3000/api/slot/create', newSchedule)
+        .post('https://qqqq-v7b6.onrender.com/api/slot/create', newSchedule)
         .then((response) => {
           setScheduleList([...scheduleList, newSchedule]);
           setIsScheduleCreated(true);
